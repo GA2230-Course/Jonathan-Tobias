@@ -15,8 +15,14 @@ public class Main {
 
         // Set one LED to red
         ledSim.setLed(Color.RED, 5);
-
+        SolidAnimation solid = new SolidAnimation(Color.black);
+        solid.setStrip(ledSim);
+        solid.init();
+        while(true){
+            solid.periodic();
+            ledSim.apply();
+        }
         // Apply the changes to the simulation
-        ledSim.apply();
+       
     }
 }
