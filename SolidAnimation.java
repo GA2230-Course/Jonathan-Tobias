@@ -1,7 +1,7 @@
 import java.awt.Color;
 
 public class SolidAnimation extends AnimationBase {
-    protected Color color;
+    private Color color;
 
     public SolidAnimation(Color color) {
         this.color = color;
