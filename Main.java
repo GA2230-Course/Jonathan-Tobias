@@ -7,13 +7,11 @@ public class Main {
         // Initialize the LED simulation with a row layout
         LedSim ledSim = LedSim.getRowsSim(100);
 
-        SolidAnimation solid = new SolidAnimation(Color.black);
-        solid.setStrip(ledSim);
-        solid.init();
-        ledSim.apply();
+        LedController control = new LedController(ledSim);
+        SolidAnimation solid = new SolidAnimation(Color.RED);
+        control.setAnimation(solid);
         while (true) {
-            solid.periodic();
-            ledSim.apply();
+            control.periodic();
         }
         // Apply the changes to the simulation
 
