@@ -12,7 +12,6 @@ public class Main {
         control.setAnimation(solid);
         while (true) {
             control.periodic();
-            ledSim.apply();
         }
         // Apply the changes to the simulation
 

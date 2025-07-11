@@ -1,7 +1,4 @@
-import java.awt.Color;
-
 import LedsSim.LedStrip;
-
 public class LedController {
     private LedStrip strip;
     private AnimationBase currentAnimation;
