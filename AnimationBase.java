@@ -11,4 +11,6 @@ public abstract class AnimationBase {
     public abstract void init();
 
     public abstract void periodic();
+
+    public abstract boolean isOver();
 }

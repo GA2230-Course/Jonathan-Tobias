@@ -9,7 +9,7 @@ public class Main {
 
         LedController control = new LedController(ledSim);
         SolidAnimation solid = new SolidAnimation(Color.RED);
-        BlinkAnimation blink = new BlinkAnimation(Color.GREEN);
+        BlinkAnimation blink = new BlinkAnimation(Color.GREEN, 5.0);
         control.setAnimation(blink);
         while (true) {
             control.periodic();

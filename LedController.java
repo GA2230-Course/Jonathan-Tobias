@@ -1,4 +1,5 @@
 import LedsSim.LedStrip;
+
 public class LedController {
     private LedStrip strip;
     private AnimationBase currentAnimation;
@@ -8,8 +9,10 @@ public class LedController {
     }
 
     public void periodic() {
-        currentAnimation.periodic();
-        this.strip.apply();
+        if (!currentAnimation.isOver()) {
+            currentAnimation.periodic();
+            this.strip.apply();
+        }
     }
 
     public void setAnimation(AnimationBase animation) {
