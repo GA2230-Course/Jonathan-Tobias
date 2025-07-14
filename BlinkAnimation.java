@@ -23,8 +23,5 @@ public class BlinkAnimation extends AnimationBase {
         else {
             this.strip.setAll(Color.black);
         }
-        if (clock.get() == interval) {
-            clock.start();
-        }
     }
 }
