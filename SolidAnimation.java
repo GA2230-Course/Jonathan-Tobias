@@ -13,4 +13,8 @@ public class SolidAnimation extends AnimationBase {
 
     public void periodic() {
     }
+
+    public boolean isOver() {
+        return false;
+    }
 }
