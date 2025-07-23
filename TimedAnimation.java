@@ -12,12 +12,14 @@ public class TimedAnimation extends AnimationBase {
     }
     public void init(){
         timer.start();
+        currentAnimation.setStrip(strip);
+        currentAnimation.init();
     }
     public void periodic(){
         currentAnimation.periodic();
     }
     public boolean isOver(){
-        if(timer.get() >= time){
+        if(timer.get() >= time || currentAnimation.isOver()){
             return true;
         }
         return false;
